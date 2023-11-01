@@ -1,0 +1,36 @@
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #0014ff;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.neon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.neon{
+    --clr:#c30606;
+    width: 100px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    border: 1px solid var(--clr);
+    border-radius: 15px;
+    justify-content:center;
+    margin-left: 50px;
+    transition: .4s;
+    filter:sepia(0)
+}
+.neon:hover{
+    transform: scale(1.6);
+    filter: sepia(0);
+}
