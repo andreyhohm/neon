@@ -9,7 +9,7 @@ body{
     background: #0014ff;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 .neon img{
     width: 100%;
@@ -103,8 +103,7 @@ body{
             --clr:#1800cc ;
     }
 }
-class sea
-.neon{
+.sea{
     --clr:#14ff00;
     width: 100px;
     height: 300px;
@@ -117,7 +116,28 @@ class sea
     transition: .4s;
     filter:blur(3px) brightness(74%) invert(0);
 }
-.neon:hover::before{
+.sea img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.sea:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--clr);
+    top:170px;
+    transform: perspective(2.5em) rotateX(25deg) scale(1, 0.2) scaleX(1.2);
+    filter: blur(0.9em);
+    animation: anim 2s;
+}
+.sea:hover{
+    transform: scale(1.6);
+    filter: blur(0) brightness(1) invert(1);
+}
+.sea:hover::before{
     content: "";
     width: 100%;
     height: 100%;
@@ -126,7 +146,7 @@ class sea
     box-shadow: 0 0 30px  #00ffc4 ,
  inset 0 0 20px #45ff00;
 ;
-    animation: anim 2s;
+    animation: sety 2s;
     border-radius: 50px;
 }
 @keyframes sety{
@@ -139,7 +159,7 @@ class sea
         --clr:#00cc00;
     }
         20%{
-        opacity: 0;
+        opacity: 0.9;
         --clr:#00cc00 ;
     }
         30%{
@@ -176,3 +196,95 @@ class sea
     }
 }
 
+.lom{
+    --clr:#69107e;
+    width: 100px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    border: 1px solid var(--clr);
+    border-radius: 15px;
+    justify-content:center;
+    margin-left: 50px;
+    transition: .4s;
+    filter:blur(3px) brightness(74%) invert(0);
+}
+.lom img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.lom:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--clr);
+    top:170px;
+    transform: perspective(2.5em) rotateX(25deg) scale(1, 0.2) scaleX(1.2);
+    filter: blur(0.9em);
+    animation: anim 2s;
+}
+.lom:hover{
+    transform: scale(1.6);
+    filter: blur(0) brightness(1) invert(1);
+}
+.lom:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    box-shadow: 0 0 30px  #59db07 ,
+ inset 0 0 20px #092200;
+;
+    animation: anim 2s;
+    border-radius: 50px;
+}
+@keyframes anim{
+    0%{
+        opacity: 0;
+        --clr:#1d1d1d ;
+    }
+        10%{
+        opacity: 0.9;
+        --clr:#a7a7a7;
+    }
+        20%{
+        opacity: 0;
+        --clr:#848484 ;
+    }
+        30%{
+        opacity: 0;
+            --clr:#9a9a9a ;
+    }
+        40%{
+        opacity: 0.7;
+            --clr:#6c6c6c ;
+    }
+        50%{
+        opacity: 0.5;
+            --clr:#7c7c7c ;
+    }
+        60%{
+        opacity: 0;
+            --clr:#9f9f9f ;
+    }
+        70%{
+        opacity: 0.9;
+            --clr:#6c6c6c ;
+    }
+        80%{
+        opacity: 0.7;
+            --clr:#ffffff ;
+    }
+        90%{
+        opacity: 0.5;
+            --clr:#9b9b9b ;
+    }
+        100%{
+        opacity: 1;
+            --clr:rgba(23, 7, 7, 0.31) ;
+    }
+}
